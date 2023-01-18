@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FizzBuzz</title>
+    <meta name="description" content="Number Guessing Game with Flask">
+  </head>
+  <body>
+    <h1>FizzBuzz game</h1>
+    {% for number in range(1, 101) %}
+    {% if (((number%5 ==0) and (number%3==0))) %}
+    <li>{{ number }} FizzBuzz</li>
+    {% elif (number%3) == 0 %}
+    <li>{{ number }} Fizz</li>
+    {% elif (number%5) == 0 %}
+    <li>{{ number }} Buzz</li>
+    {% else %}
+    <li>{{ number }}</li>
+    {% endif %}
+    {% endfor %}
+  </body>
+</html>
